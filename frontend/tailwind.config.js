@@ -2,7 +2,59 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+      },
+      screens: {
+        sm: "700px",
+        md: "768px",
+        lg: "800px",
+        xl: "920px",
+        "2xl": "1050px",
+        "3xl": "1200px",
+        "4xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        primary: "#F2AA4C",
+        "light-gray": "#DCE2F0",
+        "dark-gray": "#50586C",
+      },
+
+      screens: {
+        xxs: "450px",
+        xs: "576px",
+        sm: "640px",
+        md: "768px",
+        lg: "890px",
+        xl: "1024px",
+        "2xl": "1200px",
+        "3xl": "1400px",
+        "4xl": "1600px",
+
+        // => @media (max-width: 450px) { ... }
+        xxsDown: { max: "450px" },
+        // => @media (max-width: 576px) { ... }
+        xsDown: { max: "576px" },
+        // => @media (max-width: 640px) { ... }
+        smDown: { max: "640px" },
+        // => @media (max-width: 768px) { ... }
+        mdDown: { max: "768px" },
+        // => @media (max-width: 890px) { ... }
+        lgDown: { max: "890px" },
+        // => @media (max-width: 1024px) { ... }
+        xlDown: { max: "1024px" },
+        // => @media (max-width: 1200px) { ... }
+        "2xlDown": { max: "1200px" },
+        // => @media (max-width: 1400px) { ... }
+        "3xlDown": { max: "1400px" },
+        // => @media (max-width: 1600px) { ... }
+        "4xlDown": { max: "1600px" },
+      },
+    },
   },
   plugins: [],
 };
