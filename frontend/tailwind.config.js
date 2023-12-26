@@ -19,11 +19,17 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#F2AA4C",
-        "light-gray": "#DCE2F0",
-        "dark-gray": "#50586C",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        info: "rgb(var(--color-info) / <alpha-value>)",
+        success: "rgb(var(--color-success) / <alpha-value>)",
+        warning: "rgb(var(--color-warning) / <alpha-value>)",
+        error: "rgb(var(--color-error) / <alpha-value>)",
       },
-
+      fontFamily: {
+        sans: ["Ubuntu", "sans-serif"],
+        gloria: ["Gloria Hallelujah", "cursive"],
+      },
       screens: {
         xxs: "450px",
         xs: "576px",
