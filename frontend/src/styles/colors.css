@@ -1,0 +1,43 @@
+@layer base {
+  :root {
+    --color-primary: 7 53 85;
+    --color-secondary: 190 213 249;
+    --color-error: 226 54 54;
+    --color-info: 74 144 226;
+    --color-success: 75 181 67;
+    --color-warning: 236 148 44;
+  }
+
+  .dark,
+  [data-theme="dark"] {
+    --color-primary: 190 213 249;
+    --color-secondary: 7 53 85;
+    --color-error: 226 54 54;
+    --color-info: 74 144 226;
+    --color-success: 75 181 67;
+    --color-warning: 236 148 44;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-primary: 7 53 85;
+      --color-secondary: 190 213 249;
+      --color-error: 226 54 54;
+      --color-info: 74 144 226;
+      --color-success: 75 181 67;
+      --color-warning: 236 148 44;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .dark,
+    [data-theme="dark"] {
+      --color-primary: 190 213 249;
+      --color-secondary: 7 53 85;
+      --color-error: 226 54 54;
+      --color-info: 74 144 226;
+      --color-success: 75 181 67;
+      --color-warning: 236 148 44;
+    }
+  }
+}

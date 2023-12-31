@@ -1,47 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@layer base {
-  :root {
-    --color-primary: 7 53 85;
-    --color-secondary: 190 213 249;
-    --color-error: 226 54 54;
-    --color-info: 74 144 226;
-    --color-success: 75 181 67;
-    --color-warning: 237 185 94;
-  }
+@import "./styles/colors.css";
+@import "./styles/base.css";
 
-  .dark,
-  [data-theme="dark"] {
-    --color-primary: 190 213 249;
-    --color-secondary: 7 53 85;
-    --color-error: 226 54 54;
-    --color-info: 74 144 226;
-    --color-success: 75 181 67;
-    --color-warning: 237 185 94;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      --color-primary: 7 53 85;
-      --color-secondary: 190 213 249;
-      --color-error: 226 54 54;
-      --color-info: 74 144 226;
-      --color-success: 75 181 67;
-      --color-warning: 237 185 94;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .dark,
-    [data-theme="dark"] {
-      --color-primary: 190 213 249;
-      --color-secondary: 7 53 85;
-      --color-error: 226 54 54;
-      --color-info: 74 144 226;
-      --color-success: 75 181 67;
-      --color-warning: 237 185 94;
-    }
-  }
-}
+@config "../tailwind.config.js";

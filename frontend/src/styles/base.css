@@ -1,0 +1,9 @@
+@layer base {
+  html {
+    @apply text-primary scroll-smooth;
+  }
+
+  .btn {
+    @apply focus:outline-none transition-all ease-in-out duration-500 border-2 border-solid inline-flex justify-center gap-2 !rounded-md font-[400];
+  }
+}
