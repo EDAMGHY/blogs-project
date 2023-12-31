@@ -1,11 +1,21 @@
 import { Outlet } from "react-router-dom";
+import Header from "./DashboardHeader";
+import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 const DashboardLayout = () => {
   return (
-    <div className='bg-green-500 text-white'>
-      <h1>DashboardLayout</h1>
-      <Outlet />
-    </div>
+    <main>
+      <div className='w-full flex items-start justify-center'>
+        <Sidebar />
+        <div className='ml-[250px] w-full'>
+          <Header />
+          <h1>DashboardLayout</h1>
+          <Outlet />
+          <Footer />
+        </div>
+      </div>
+    </main>
   );
 };
 

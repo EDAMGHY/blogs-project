@@ -1,11 +1,17 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const MainLayout = () => {
   return (
-    <div className='bg-red-500 text-white'>
-      <h1>MainLayout</h1>
-      <Outlet />
-    </div>
+    <main>
+      <Header />
+      <div className='container'>
+        <h1>MainLayout</h1>
+        <Outlet />
+      </div>
+      <Footer />
+    </main>
   );
 };
 
